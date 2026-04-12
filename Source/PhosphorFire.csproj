@@ -5,42 +5,53 @@
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+
+      <!-- System variables using SDK property functions -->
+      <IsWindows>$([System.OperatingSystem]::IsWindows())</IsWindows>
+      <IsLinux>$([System.OperatingSystem]::IsLinux())</IsLinux>
+      <IsMacOS>$([System.OperatingSystem]::IsMacOS())</IsMacOS>
+      <CurrentOS Condition="'$(IsMacOS)' == 'True'">MacOS</CurrentOS>
+      <CurrentOS Condition="'$(IsLinux)' == 'True'">Linux</CurrentOS>
+      <CurrentOS Condition="'$(IsWindows)' == 'True'">Windows</CurrentOS>
+      <UserName>$([System.Environment]::UserName)</UserName>
+      <UserFolder Condition="'$(CurrentOS)' != 'Windows'">$(HOME)</UserFolder>
+      <UserFolder Condition="'$(CurrentOS)' == 'Windows'">$(USERPROFILE)</UserFolder>
+
+      <RimWorldPath Condition="'$(RimWorldPath)' == '' and '$(IsMacOS)' == 'True'">$(UserFolder)/Library/Application Support/Steam/steamapps/common/RimWorld</RimWorldPath>
+      <RimWorldPath Condition="'$(RimWorldPath)' == '' and '$(IsLinux)' == 'True'">$(UserFolder)/.local/share/Steam/steamapps/common/RimWorld</RimWorldPath>
+      <RimWorldPath Condition="'$(RimWorldPath)' == '' and '$(IsWindows)' == 'True'">C:/Program Files (x86)/Steam/steamapps/common/RimWorld</RimWorldPath>
+      <RimWorldInternal Condition="'$(IsMacOS)' == 'True'">$(RimWorldPath)/RimWorldMac.app</RimWorldInternal>
+      <RimWorldInternal Condition="'$(IsMacOS)' == 'False'">$(RimWorldPath)</RimWorldInternal>
+      <Workshop>$(RimWorldPath)/../../workshop/content/294100</Workshop>
   </PropertyGroup>
-
+    
+    <ItemGroup>
+        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4759-beta" />
+        <PackageReference Include="Lib.Harmony.Ref" Version="2.4.2" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <Reference Include="NepalmFire2">
+            <HintPath>$(RimWorldInternal)/Mods/Segmentum-ChildrenOfTheOmnissiah/Assemblies/NepalmFire2.dll</HintPath>
+        </Reference>
+        <Reference Include="FireFlamework">
+            <HintPath>$(RimWorldInternal)/Mods/Segmentum-ChildrenOfTheOmnissiah/Assemblies/FireFlamework.dll</HintPath>
+        </Reference>
+        <Reference Include="Core40k">
+            <HintPath>$(Workshop)/3267464767/1.6/Assemblies/Core40k.dll</HintPath>
+        </Reference>
+        <Reference Include="VEF">
+            <HintPath>$(Workshop)/2023507013/1.6/Assemblies/VEF.dll </HintPath>
+        </Reference>
+    </ItemGroup>
+    
   <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
-    </Reference>
-
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\..\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
-    </Reference>
-
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-   <Reference Include="0Harmony">
-    <HintPath>..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
-  </Reference>
- <Reference Include="Core40k">
-    <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rimdark40kFramework\1.6\Assemblies\Core40k.dll</HintPath>
-</Reference>
- <Reference Include="VEF">
-    <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\VEF.dll </HintPath>
-</Reference>
-<Reference Include="NepalmFire2">
-    <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Segmentum-ChildrenOfTheOmnissiah\Assemblies\NepalmFire2.dll</HintPath>
-</Reference>
-<Reference Include="FireFlamework">
-    <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Segmentum-ChildrenOfTheOmnissiah\Assemblies\FireFlamework.dll</HintPath>
-</Reference>
-  <Compile Include="Thing_PhosphorFire.cs" />
-  <Compile Include="RanksParts.cs" />
-  <Compile Include="FerricLure.cs" />
-  <Compile Include="FloorCovering.cs" />
-  <Compile Include="Waveburst.cs" />
-
-  </ItemGroup>
+    <Compile Include="Thing_PhosphorFire.cs" />
+    <Compile Include="RanksParts.cs" />
+    <Compile Include="FerricLure.cs" />
+    <Compile Include="FloorCovering.cs" />
+    <Compile Include="Waveburst.cs" />
+    </ItemGroup>
 </Project>
 
 
