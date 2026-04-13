@@ -32,10 +32,10 @@
     
     <ItemGroup>
         <Reference Include="NepalmFire2">
-            <HintPath>$(RimWorldInternal)/Mods/Segmentum-ChildrenOfTheOmnissiah/Assemblies/NepalmFire2.dll</HintPath>
+            <HintPath>../Assemblies/NepalmFire2.dll</HintPath>
         </Reference>
         <Reference Include="FireFlamework">
-            <HintPath>$(RimWorldInternal)/Mods/Segmentum-ChildrenOfTheOmnissiah/Assemblies/FireFlamework.dll</HintPath>
+            <HintPath>../Assemblies/FireFlamework.dll</HintPath>
         </Reference>
         <Reference Include="Core40k">
             <HintPath>$(Workshop)/3267464767/1.6/Assemblies/Core40k.dll</HintPath>
@@ -46,10 +46,14 @@
     </ItemGroup>
     
   <ItemGroup>
+    <Compile Include="RankDeathUtility.cs" />
+    <Compile Include="RemoveOrReplaceDeathThoughts.cs" />
+    <Compile Include="SegmentumDefOf.cs" />
     <Compile Include="Thing_PhosphorFire.cs" />
     <Compile Include="RanksParts.cs" />
     <Compile Include="FerricLure.cs" />
     <Compile Include="FloorCovering.cs" />
+    <Compile Include="Thought_RankDeathCounting.cs" />
     <Compile Include="Waveburst.cs" />
     </ItemGroup>
 </Project>

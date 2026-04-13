@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThoughtDef Parent="DeathMemory">
+        <defName>RankDeathCountingThought</defName>
+        <durationDays>20</durationDays>
+        <thoughtClass>PhosphorFire.Thought_RankDeathCounting</thoughtClass>
+        <nullifyingTraits>
+            <li>Psychopath</li>
+            <li>Bloodlust</li>
+        </nullifyingTraits>
+        <stages>
+            <li>
+                <label>Rank colonist died</label>
+                <description>One of the people in our rank died. We should be able to take care of our people.</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+            <li>
+                <label>High ranking colonist died</label>
+                <description>One of the people in our rank died. We should be able to take care of our people.</description>
+                <baseMoodEffect>-20</baseMoodEffect>
+            </li>
+            <li>
+                <label>Ruler died</label>
+                <description>The ruler died.</description>
+                <baseMoodEffect>-30</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

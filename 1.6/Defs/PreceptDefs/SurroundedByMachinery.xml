@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <IssueDef>
+        <defName>SurroundedByMachinery</defName>
+        <label>surrounded by machinery</label>
+<!--        <iconPath></iconPath>-->
+    </IssueDef>
+
+    <PreceptDef>
+        <defName>SurroundedByMachinery</defName>
+        <issue>SurroundedByMachinery</issue>
+        <label>surrounded by machinery</label>
+        <description>test test</description>
+        <impact>Medium</impact>
+    </PreceptDef>
+</Defs>

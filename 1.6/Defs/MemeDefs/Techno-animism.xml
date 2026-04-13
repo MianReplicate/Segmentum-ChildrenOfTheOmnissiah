@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <MemeDef>
+        <defName>Techno_Animism</defName>
+        <label>Techno-animism</label>
+        <description>Being surrounded by technology is not only a means of life, but a necessity in the eyes of the Mechanicus.</description>
+        <!--    <iconPath></iconPath>-->
+        <groupDef>Misc</groupDef>
+            <impact>2</impact>
+        <!--    <generalRules>-->
+        <!--        <rulesStrings>-->
+        <!--            <li>memeAdjective->human</li>-->
+        <!--            <li>memeAdjective->mortal</li>-->
+        <!--            <li>memeAdjective->hominid</li>-->
+        <!--            <li>memeHyphenPrefix->anthro</li>-->
+        <!--            <li>memeConcept->mankind</li>-->
+        <!--            <li>memeConcept->humanity</li>-->
+        <!--            <li>memeLeaderNoun->human</li>-->
+        <!--            <li>memeLeaderNoun->hominid</li>-->
+        <!--            <li>memeLeaderNoun->mortal</li>-->
+        <!--            <li>memeLeaderNoun->person</li>-->
+        <!--            <li>memeLeaderNoun->sapient</li>-->
+        <!--        </rulesStrings>-->
+        <!--    </generalRules>-->
+        <requireOne>
+            <li>
+                <li>RankDeathCounting</li>
+            </li>
+            <li>
+                <li>SurroundedByMachinery</li>
+            </li>
+        </requireOne>
+        <descriptionMaker>
+            <rules>
+                <rulesStrings>
+                    <!--                &lt;!&ndash; theist myth &ndash;&gt;-->
+                    <!--                <li>creation(tag=meme_HumanPrimacy)        ->[deity0_name] created all of nature, and gave it to man as a gift, to serve man and his purposes forever.</li>-->
+                    <!--                <li>episode(uses=1,tag=meme_HumanPrimacy)  ->The people fought with the beasts of the forest, and [deity0_name] saw their struggle, and gave them weapons to control nature.</li>-->
+                    <!--                &lt;!&ndash; theist founder &ndash;&gt;-->
+                    <!--                <li>intro(tag=meme_HumanPrimacy)           ->The first crashlanded settlers of the [place_summary] [place_name] were beset by manhunting [Animal]s. [deity0_name] intervened, slaying the beasts and making clear [deity0_possessive] preference for the human race.</li>-->
+                    <!--                <li>conflict(tag=meme_HumanPrimacy)        ->An anti-human [foeLeader] made an edict giving some equal rights to both animals and humans. [deity0_name] wept as the [memberNamePlural] were forced to give their rights to [Animal]s and [Animal]s.</li>-->
+                    <!--                <li>founderJoin(tag=meme_HumanPrimacy)     ->A [place_job] named [founderName] founded the now-famous xeno-zoo on [place_name]. [founder_pronoun] used animal slaughter performances to teach visitors about [deity0_name]'s desire for humanity to rule nature.</li>-->
+                    <!--                <li>victory(tag=meme_HumanPrimacy)         ->Because of [founderName]'s actions, the [foeLeader]'s [foeSoldiers] saw [deity0_name]'s truth. They celebrated their shared humanity with the [memberNamePlural] and banished the [foeLeader] to live in the wilderness like an animal.</li>-->
+                    <!--                &lt;!&ndash; ideological founder &ndash;&gt;-->
+                    <!--                <li>setup(tag=meme_HumanPrimacy)           ->[founderName] built a colony on a green world, spreading the dominion of humanity over every field and forest.</li>-->
+                    <!--                <li>story(uses=1,tag=meme_HumanPrimacy)    ->Once, [founderName] saw a dog growl at a boy. [founder_pronoun] ordered the dog killed on the spot.</li>-->
+                    <!--                &lt;!&ndash; ideological lesson &ndash;&gt;-->
+                    <!--                <li>lessonIntro(tag=meme_HumanPrimacy)         ->I visited a well-run farm full of healthy animals and thriving crops. Beside it was a forest in its natural state, gnarled and vicious. It was obvious that</li>-->
+                    <!--                <li>lesson(tag=meme_HumanPrimacy)              ->human beings alone are what give meaning to the universe</li>-->
+                    <!--                <li>lesson(tag=meme_HumanPrimacy)              ->nature is an endless frenzy of immoral destruction, and humans are the solution</li>-->
+                    <!--                <li>lessonReinforcement(tag=meme_HumanPrimacy) ->If the contest is survival of the fittest, then we have clearly won.</li>-->
+                    <!--                &lt;!&ndash; archist &ndash;&gt;-->
+                    <!--                <li>archistBasis(tag=meme_HumanPrimacy)    ->Archotechs are machines of vast will and power, but only humanity could create them.</li>-->
+                    <!--                <li>archistFact(tag=meme_HumanPrimacy)     ->Humans are the device-makers, and the archotechs are their devices.</li>-->
+                    <!--                <li>archistProphecy(tag=meme_HumanPrimacy) ->[inTheEnd], by observing humanity, the archotechs will finally understand their purpose, and lift confident humanity up to rule them.</li>-->
+                    <!--                &lt;!&ndash; animist &ndash;&gt;-->
+                    <!--                <li>animistFact(tag=meme_HumanPrimacy)     ->Nature's animals are the spirits of slaves, and demand to be taken into service.</li>-->
+                </rulesStrings>
+            </rules>
+        </descriptionMaker>
+        <symbolPacks>
+            <li>
+                <ideoName>Technologism</ideoName>
+                <theme>technology</theme>
+                <adjective>technologistic</adjective>
+                <member>technologist</member>
+            </li>
+            <li>
+                <ideoName>Machinism</ideoName>
+                <theme>machinery</theme>
+                <adjective>machinist</adjective>
+                <member>machinist</member>
+            </li>
+        </symbolPacks>
+    </MemeDef>
+</Defs>

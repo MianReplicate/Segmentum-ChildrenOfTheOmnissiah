@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <IssueDef>
+        <defName>RankDeathCounting</defName>
+        <label>rank-related death counting</label>
+<!--        <iconPath></iconPath>-->
+    </IssueDef>
+
+    <PreceptDef>
+        <defName>RankDeathCounting</defName>
+        <issue>RankDeathCounting</issue>
+        <label>rank-related death counting</label>
+        <description>Pawns of the related rank will not be sad when other pawns die except for when they have a personal relationship or if the killed pawn is of their rank.</description>
+        <impact>Medium</impact>
+    </PreceptDef>
+</Defs>
